@@ -1,0 +1,190 @@
+/* -------------
+    Заголовок
+    ------------- */
+
+.logo {
+    width: auto;
+    height: 100%;
+    margin-left: 1.2vw
+}
+
+.logo a {
+    color: #FE795A;
+    font-size: 90px;
+    text-align: center;
+}
+
+.title {
+    width: 60%;
+}
+
+.title h1 {
+    font-size: xx-large;
+    align-items: center;
+    margin-left: 2%;
+    font-style: normal;
+    color: #FFFFFF;
+    font-family: 'Kurale', serif; 
+    font-weight: 500; 
+    line-height: 1em;
+}
+
+.dropdown {
+    position: absolute;
+    display: inline-block;
+    right: 1.2vw;
+    color: #495A92;
+}
+
+.dp-content {
+    display: none;
+    position: absolute;
+    background: #FFE0D6;
+    min-width: 200px;
+    box-shadow: 5px 8px 16px 0px #FFE0D6;
+    z-index: 1;
+    border-radius: 5px;
+    right: 0;
+    text-transform: uppercase;
+    
+}
+
+.dropdown:hover .dp-content {
+    display: block;
+}
+
+.dpbtn {
+    position: relative;
+    border: none;
+    cursor: pointer;
+    font-size: 100px;
+    height: 85px;
+    color: #FE795A;
+    border-radius: 20px;
+    transition: all 0.2s;
+}
+
+.dp-content a {
+    color: #495A92;
+    padding: 12px 16px;
+    display: block;
+    text-align: center;
+    transition: all 0.2s;
+    font-family: 'Kurale', serif;
+    font-weight: 800;
+}
+
+.dp-content a:hover {
+    background-color: #FAB5D4;
+    border-radius: 5px;
+    
+}
+
+.dropdown:hover .dpbtn {
+    background-color: #FFE0D6;
+    filter: blur(2px);
+}
+
+/* -------------
+    Футер
+    ------------- */
+footer {
+    position: relative;
+    background: radial-gradient(circle, rgba(98, 116, 166, 1) 0%, rgba(121, 138, 185, 0.7) 30%, rgba(132, 150, 192, 0.4) 68%, rgb(134, 145, 167, 0.2) 100%);
+}
+
+footer div.section {
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+.c {
+    width: 30%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #FFFFFF;
+    font-family: 'Alumni Sans Pinstripe', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+}
+
+.c-1,
+.c-3 {
+    font-size: calc(6px + 6 * (((100vw + 80vh)/2) / 1140));
+    line-height: 18px;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.c-2 {
+    flex-direction: row;
+    justify-content: space-around;
+    align-self: center;
+}
+
+.c-2 a {
+    color: #FE795A;
+}
+
+.c-2 a:hover {
+    color: #FAB5D4;
+}
+
+.c-3 {
+    justify-self: right;
+    align-items: flex-end;
+    flex-direction: column;
+    text-align: right;
+}
+
+.buton a {
+    color: #495A92;
+    font-family: 'Kurale', serif;
+    font-weight: 800;
+}
+
+.buton {
+    width: 30%;
+    cursor: pointer;
+    background: #FE795A;
+    border-radius: 8px;
+    font-weight: 400;
+    font-size: calc(10px + 4 * (((100vw + 80vh)/2) / 1140));
+    text-align: center;
+    padding: 1%;
+    transition: all 0.1s;
+}
+
+.buton:hover {
+    background: #FAB5D4;
+}
+
+/* -----------
+Медиа
+-------------*/
+@media (max-width: 860px) {
+    .title {
+        order: 3;
+        width: 80vw;
+    }
+
+    .title h1 {
+        font-size: calc(20px + 12 * (((100vw + 80vh)/2) / 1140));
+    }
+
+    .dropdown {
+        top: 0.8vh;
+    }
+
+      .menu button {
+        font-size: calc(12px + 12 * (((100vw + 80vh)/2) / 1140));
+    }
+    .buton {
+        width: fit-content;
+        padding: 0 4px;
+    }
+}

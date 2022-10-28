@@ -1,18 +1,21 @@
+/* --------------
+font-family: 'Alumni Sans Pinstripe', sans-serif; font-weight: 600;letter-spacing: 0.1em;     Подвал, текст
+font-family: 'Kurale', serif; font-weight: 500;                                              Кнопки, заголовки
+font-family: 'Philosopher', sans-serif; font-weight: 400;                                   Текст, заголовки
+ --------------*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
+    text-decoration: none;
 }
 
 html {
     background: radial-gradient(100% 100% at 30% 0%, rgba(61, 76, 125, 0.85) 0%,
-             rgba(157, 175, 211, 0.85) 100%, rgba(161, 178, 214, 0.85) 100%) no-repeat, 
-             url(./img/bg.jpg) top/100% repeat-y ;
+            rgba(157, 175, 211, 0.85) 100%, rgba(161, 178, 214, 0.85) 100%) no-repeat,
+        url(./img/bg.jpg) top/100% repeat-y;
 }
-/* -------------
-    Заголовок
-    ------------- */
+
 .section {
     position: relative;
     margin: auto;
@@ -21,106 +24,29 @@ html {
     max-width: 1140px;
     align-items: center;
     flex-wrap: wrap;
-    border: 1px solid red;
     margin-bottom: 5vh;
+
+    border: 1px solid red;
 }
 
-.logo {  
-    width: auto;
-    height: 100%;
-    margin-left: 1.2vw
-}
-
-.logo a {
-    text-decoration: none;
-    color: #FE795A; 
-    font-size: 90px;
-    text-align: center;
-}
-.title {
-    width: 60%;   
-}
-
-
-.title h1 {     
-    font-size:xx-large; 
-    align-items: center;
-    margin-left: 2%;
-    font-style: normal;
-    font-weight: 400;
+.Nadpis {
+    margin-bottom: 1vh;
+    font-size: calc(14px + 10 * (((100vw + 100vh)/2) / 1140));
     color: #FFFFFF;
+    font-family: 'Philosopher', sans-serif; 
+    font-weight: 400;
+    font-style: normal;
+    padding-left: 2%;;
+    letter-spacing: 3px;
 }
 
-.dropdown {
-    position: absolute;
-    display: inline-block;
-    right: 1.2vw
-}
-
-.dp-content {
-    display: none;
-    position: absolute;
-    background: #FFE0D6;
-    min-width: 200px;
-    box-shadow: 5px 8px 16px 0px #FFE0D6;
-    z-index: 1;
-    border-radius: 5px;
-    right: 0;
-    text-transform: uppercase;
-    transition: all 0.2s;
-}
-
-.dropdown:hover .dp-content {
-    display: block;
-}
-
-.dpbtn {
-    position: relative;
-    border: none;
-    cursor: pointer;
-    font-size: 100px;
-    height: 85px;
-    color: #FE795A;
-    border-radius: 20px;
-    transition: all 0.2s;
-}
-
-.dp-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: center;
-    transition: all 0.2s;
-}
-
-.dp-content a:hover {
-    background-color: #fdc5b3;
-    border-radius: 5px;
-    transition: all 0.2s;
-}
-
-.dropdown:hover .dpbtn {
-    background-color: #FFE0D6;
-    filter: blur(2px);
-    
-}
 
 /* -------------
-    Контент
+    Контент INDEX
     ------------- */
-
-    /* .content {
-        display: flex;
-        margin: auto;
-        width: 1140px;
-        border: 1px solid red;
-        position: relative;
-    } */
 
 .right {
     width: 50%;
-    border: 1px solid rgb(9, 255, 0);
 }
 
 .right img {
@@ -135,21 +61,17 @@ html {
     align-items: flex-start;
     padding: 0;
     align-self: start;
-    border: 1px solid rgb(47, 0, 255);
 }
 
 .left h2 {
     width: 85%;
-    
-    font-style: normal;
-    font-weight: 400;
-    font-size: 48px;
+    margin-bottom: 18%;
+    margin-left: 8%;
+    font-size: calc(32px + 16 * (((100vw + 100vh)/2) / 1140));
     color: #FFFFFF;
-    margin-bottom: 5vh;
-    margin-left: 1.2vw;
-
-
-    border: 1px solid red;
+    font-family: 'Philosopher', sans-serif; 
+    font-weight: 400;
+    font-style: normal;
 }
 
 .menu {
@@ -157,29 +79,37 @@ html {
     padding: 0;
     display: flex;
     flex-wrap: wrap;
-    justify-content:center;
-    margin-bottom: 25%;
+    justify-content: center;
+    margin-bottom: 20%;
 }
 
-.menu a{
+.menu a {
     display: block;
     width: 40%;
-    margin: 1.5vh 0.8vw;
+    margin: 1.5vh 2%;
 }
+
 .menu button {
     width: 100%;
-    
     justify-content: center;
     height: 140px;
     background: #FFE0D6;
     border: 4px solid #9DAFD3;
     border-radius: 11px;
     font-weight: 400;
-    font-size: 190%;
-    line-height: 39px;
-    color: #000000;
+    font-size: calc(18px + 12 * (((100vw + 80vh)/2) / 1140));
+    line-height: 1.5em;
     text-transform: uppercase;
     cursor: pointer;
+    transition: all 0.2s;
+    color: #495A92;
+    font-family: 'Kurale', serif;
+    font-weight: 800;
+}
+
+.menu button:hover {
+    background: #FAB5D4;
+    width: 105%;
 }
 
 .OrderBye {
@@ -187,57 +117,134 @@ html {
     width: 85%;
 }
 
-.OrderBye button{
+.OrderBye button {
     width: 100%;
     border: none;
     cursor: pointer;
-    height: 108px;
+    height: max-content;
     background: #FE795A;
     border-radius: 25px;
     font-weight: 400;
-    font-size: 280%;
+    font-size: calc(32px + 8 * (((100vw + 80vh)/2) / 1140));
     line-height: 58px;
+    padding: 6% 0;
+    transition: all 0.1s;
+    color: #495A92;
+    font-family: 'Kurale', serif;
+    font-weight: 800;
 }
 
-/* -------------
-Футер
-------------- */
-
-footer {
-    position:relative; 
-    background: #9DAFD3;
-    border: 1px solid red;
-        
+.OrderBye button:hover {
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+    background: #FAB5D4;
 }
 
-footer div.section { 
-    
-    justify-content: space-between;
-    align-items: flex-end;
-    margin-bottom: 0;
+
+/* -----------
+Contacts
+--------------*/
+
+.Contacts-left {
+    width: 55%;
+    border: 1px solid #9DAFD3;
+    border-radius: 25px;
+    padding: 2%;
+    margin-left: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
-.c {
-    width: 30%;
-    border: 1px solid blue;
+.Conacts-rows {
+    width: 100%;
+    margin-bottom: 2%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-footer p {
-    display: inline;
-    
+.Contacts-pic {
+    width: 15%;
+    margin-right: 4%;
+    transition: all 5s;  
 }
 
+.Contacts-pic:hover {
+    border-radius: 50px;
+    background-color: #FFE0D6;
+    filter:blur(5px);
+}
+
+.Contacts-pic img {
+    width: 100%;
+    height: auto;
+    filter:blur(0.8px);
+}
+
+.Contacts-logins {
+    height:100%;
+    font-family: 'Alumni Sans Pinstripe', sans-serif; 
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    line-height: 1.5em;
+    font-size: calc(14px + 2 * (((100vw + 80vh)/2) / 1140));
+}
+
+.Contacts-logins a {
+    color:#FFFFFF;
+}
+
+.Contacts-right {
+    width: 40%;
+    margin-left: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-self: flex-start;
+}
+
+.Contacts-circles {
+    width: 100%;
+    margin-bottom: 16%;
+}
+
+.A img, .B img {
+    width: 100%;
+}
+
+.A {
+    position: relative;
+}
+
+.B {
+    width: 50%;
+    position:absolute;
+    bottom: 5%;
+    left: 2%;
+    cursor: pointer;
+    border-radius:50%;
+}
+
+.Contacts-right div.OrderBye {
+    width: 100%;
+}
+
+/* -----------
+Обо мне
+--------------*/
+
+
+
+/* -----------
+Медиа
+-------------*/
 @media (max-width: 860px) {
-    .title {
-        order: 3;
-        width: 80vw;
-    }
-    .title h1 {
-        font-size: x-large;
-    }
-    .dropdown {
-        top: 0.8vh;
-    }
+    /* --Index-- */
     .right {
         width: 100%;
         margin-top: 5vh;
@@ -250,6 +257,34 @@ footer p {
         font-size: 36px;
     }
     .menu button {
-        font-size: 3vw;
+        font-size: calc(12px + 12 * (((100vw + 80vh)/2) / 1140));
     }
+
+    /* --Contacts-- */
+    .Contacts-pic {
+        min-width: 80px;
+    }
+    .Contacts-left {
+        width: 100%;
+        margin-right: 2%;
+    }
+    .Contacts-right {
+        width: 100%;
+        margin: 2% 2% 0 2%;
+    }
+ 
+}
+
+@keyframes shake {
+    0% {transform: translate(1px, 1px) rotate(0deg);}
+    10% {transform: translate(-1px, 2px) rotate(-1deg);}
+    20% {transform: translate(-0px, 0px) rotate(1deg);}
+    30% { transform: translate(1px, 2px) rotate(0deg);}
+    40% {transform: translate(1px, -1px) rotate(1deg);}
+    50% {transform: translate(-1px, 2px) rotate(-1deg);}
+    60% {transform: translate(-1px, 1px) rotate(0deg);}
+    70% {transform: translate(-2px, 0px) rotate(-1deg);}
+    80% {transform: translate(-1px, -1px) rotate(0deg);}
+    90% {transform: translate(1px, 2px) rotate(1deg);}
+    100% {transform: translate(1px, -2px) rotate(-1deg);}
 }
