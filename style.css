@@ -167,7 +167,8 @@ Contacts
 .Contacts-pic {
     width: 15%;
     margin-right: 4%;
-    transition: all 5s;  
+    transition: all 5s;
+    
 }
 
 .Contacts-pic:hover {
@@ -238,8 +239,63 @@ Contacts
 Обо мне
 --------------*/
 
+.About-top, .About-left-mid{
+    width: 50%;
+    align-self: start;
+    padding: 0 2%;
+    font-size: calc(16px + 10 * (((100vw + 80vh)/2) / 1140));
+}
 
+.About-left-mid ul, .About-top ul {
+    text-decoration: none;
+    list-style:inside;
+    font-family: 'Kurale', serif; font-weight: 500; 
+    color: #FFFFFF;
+    padding: 4%;
+    border-radius: 25px;
+    border: 1px solid #9DAFD3;
+    margin-right: 2%;
+}
 
+.About-left-mid {
+    width: 60%;
+    padding: 0 0 2% 2%;
+    font-size: calc(16px + 8 * (((100vw + 80vh)/2) / 1140));
+    color: #FFFFFF;
+}
+
+.About-right-mid {
+    width: 40%;
+    padding: 5%;
+}
+
+.About-row {
+    width: 96%;
+    margin: 1% 2%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.About-row img {
+    width: 100%;
+}
+
+.About-row div {
+    width: 15%;
+}
+
+.About-row p {
+    margin: .4%;
+    max-width: 85%;
+    padding: .7%;
+    background: #FFE0D6;
+    border-radius: 12px;
+    color: #495A92;
+    font-family: 'Kurale', serif; 
+    font-weight: 500;  
+    font-size: calc(12px + 8 * (((100vw + 80vh)/2) / 1140));
+    text-align: justify;
+}
 /* -----------
 Медиа
 -------------*/
@@ -271,6 +327,14 @@ Contacts
     .Contacts-right {
         width: 100%;
         margin: 2% 2% 0 2%;
+    }
+
+    /* -- Aboutme-- */
+    .About-left-mid {
+        width: 100%;
+    }
+    .About-right-mid {
+        display: none;
     }
  
 }

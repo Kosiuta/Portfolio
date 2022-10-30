@@ -139,6 +139,7 @@ footer div.section {
     align-items: flex-end;
     flex-direction: column;
     text-align: right;
+    margin-right: 2%;
 }
 
 .buton a {
@@ -157,6 +158,7 @@ footer div.section {
     text-align: center;
     padding: 1%;
     transition: all 0.1s;
+    margin-right: 1%;
 }
 
 .buton:hover {
