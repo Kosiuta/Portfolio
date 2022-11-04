@@ -1,3 +1,5 @@
+// ------------  SERVICES ------------
+
 const accordion__items = [...document.querySelectorAll('.accordion__item')]; // Получаю элементы .accordion__item
 
 accordion__items.forEach((item) => { // прохожусь по ним в цикле
@@ -37,3 +39,6 @@ accordion__items.forEach((item) => { // прохожусь по ним в цик
     addOrRemoveHeight(height); // Вызываем функцию, которая добавляет в CSS высоту элементу
   });
 });
+
+// ------------- GALLARY ------------
+
