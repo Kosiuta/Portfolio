@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./bootstrap.css">
     <link rel="stylesheet" href="./HeaderFooter.css">
     <link rel="shortcut icon" type="image/x-icon" href="./img/favicon.png">
     <script src="https://use.fontawesome.com/d2f0b40600.js"></script>
@@ -19,7 +20,9 @@
 </head>
 
 <body style="min-height: 100vh;">
+
     <!-- Заголовок -->
+    
     <header class="section">
         <div class="logo">
             <a href="./index.html">
@@ -58,7 +61,7 @@
     <div class="section Nadpis">
         <h2 id="backend">Back-End Разработка</h2>
     </div>
-    <div class="section bord">
+    <section class="section bord">
         <div class="project-block">
             <img src="./img/Rectangle 3.jpg" class="project-img" alt="">
             <h1 class="project-name">project 01</h1>
@@ -99,11 +102,11 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
     <div class="section Nadpis">
         <h2 id="frontend">Front-End Разработка</h2>
     </div>
-    <div class="section bord">
+    <section class="section bord">
         <div class="project-block">
             <img src="./img/Rectangle 3.jpg" class="project-img" alt="">
             <h1 class="project-name">project 01</h1>
@@ -144,11 +147,11 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
     <div class="section Nadpis">
         <h2 id="3d">3D Дизайн Разработка</h2>
     </div>
-    <div class="section bord">
+    <section class="section bord">
         <div class="project-block">
             <img src="./img/Rectangle 3.jpg" class="project-img" alt="">
             <h1 class="project-name">project 01</h1>
@@ -189,13 +192,42 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <div class="section">
-        <div class="OrderBye bottom-button"><a href="#"><button>Сделать заказ</button></a></div>
+        <div class="OrderBye bottom-button"><a href="#popap"><button>Сделать заказ</button></a></div>
     </div>
+
+        <!-- Попап -->
+
+        <div id="popap" class="popap">
+            <a href="#" class="popap-area"></a>
+            <div class="popap-body">
+                <div class="popap-content">
+                    <a href="#" class="popap-close">X</a>
+                    <form onsubmit="alert('Данные отправлены. В скором времени я с вами свяжусь.');return false">
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Введите свой Email</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1"
+                            placeholder="name@example.com">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label"></label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="10" placeholder="Опишите, что нужно. Укажите дополнительные способы связи с вами..."></textarea>
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" checked="checked" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1" >Нужна консультация</label>
+                      </div>
+                      <button type="submit" class="btn btn-primary">Отправить</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    
     
     <a href="#" class="topbutton">Наверх</a>
+
     <!-- Подвал-->
 
     <footer>

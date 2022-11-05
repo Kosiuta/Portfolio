@@ -18,7 +18,9 @@
 </head>
 
 <body style="min-height: 100vh;">
+
     <!-- Заголовок -->
+
     <header class="section">
         <div class="logo">
             <a href="./index.html">
@@ -34,9 +36,9 @@
             <div class="dpbtn"><i class="fa fa-external-link-square fa-rotate-180" aria-hidden="true"
                     style="height: 88px;"></i></div>
             <div class="dp-content">
+                <a href="./index.html">На главную</a>
                 <a href="./projects.html">Проекты</a>
                 <a href="./services.html">Услуги</a>
-                <a href="./gallary.html">Галерея</a>
                 <a href="./aboutme.html">Обо мне</a>
                 <a href="./contacts.html">Контакты</a>
             </div>
@@ -48,13 +50,13 @@
     <div class="section Nadpis">
         <h2>Галерея</h2>
     </div>
-    <div class="section">
+    <section class="section">
         <div class="gal-left">
-             <div class="gal-btn">
-                <a href="./projects.html"><button>Front-End</button></a>
+             <div class="gal-btn" onclick="changeGal('Front-End')">
+                <a href="#"><button>Front-End</button></a>
             </div>
-             <div class="gal-btn">
-                <a href="./projects.html"><button>3D-Design</button></a>
+             <div class="gal-btn" onclick="changeGal('Desing')">
+                <a href="#"><button>3D-Design</button></a>
             </div>
         </div>
 
@@ -84,7 +86,7 @@
                 </button>
               </div>
         </div>
-    </div>
+    </section>
     <!-- Подвал-->
 
     <footer>

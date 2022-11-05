@@ -7,17 +7,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Главная</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./bootstrap.css">
     <link rel="stylesheet" href="./HeaderFooter.css">
     <link rel="shortcut icon" type="image/x-icon" href="./img/favicon.png">
     <script src="https://use.fontawesome.com/d2f0b40600.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe&family=Kurale&family=Philosopher&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe&family=Kurale&family=Philosopher&display=swap"
+        rel="stylesheet">
 </head>
 
 <body style="min-height: 100vh;">
+
     <!-- Заголовок -->
+    
     <header class="section">
         <div class="logo">
             <a href="./index.html">
@@ -41,11 +46,14 @@
             </div>
         </nav>
     </header>
+
     <!-- Контент-->
-    <div class="section">
+
+    <section class="section">
         <div class="left">
             <h2 style="margin-bottom: 0;">Руслан Косюта</h2>
-            <h2 class="Nadpis" style="font-size: calc(14px + 10 * (((100vw + 100vh)/2) / 1140));">Ведущий Fullstack разработчик</h2>
+            <h2 class="Nadpis" style="font-size: calc(14px + 10 * (((100vw + 100vh)/2) / 1140));">Ведущий Fullstack
+                разработчик</h2>
             <div class="menu">
                 <a href="./projects.html"><button>Проекты</button></a>
                 <a href="./services.html"><button>Услуги</button></a>
@@ -53,12 +61,40 @@
                 <a href="./aboutme.html"><button>Обо мне</button></a>
 
             </div>
-            <div class="OrderBye"><a href="#"><button>Сделать заказ</button></a></div>
+            <div class="OrderBye"><a href="#popap"><button>Сделать заказ</button></a></div>
         </div>
         <div class="right">
             <div><img src="./img/photo1.png" alt="photo"></div>
         </div>
+    </section>
+
+    <!-- Попап -->
+
+    <div id="popap" class="popap">
+        <a href="#" class="popap-area"></a>
+        <div class="popap-body">
+            <div class="popap-content">
+                <a href="#" class="popap-close">X</a>
+                <form onsubmit="alert('Данные отправлены. В скором времени я с вами свяжусь.');return false">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Введите свой Email</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1"
+                        placeholder="name@example.com">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label"></label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="10" placeholder="Опишите, что нужно. Укажите дополнительные способы связи с вами..."></textarea>
+                </div>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" checked="checked" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1" >Нужна консультация</label>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Отправить</button>
+                </form>
+            </div>
+        </div>
     </div>
+
     <!-- Подвал-->
 
     <footer>
@@ -74,7 +110,8 @@
                 </p>
                 <p><a href="https://twitter.com" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                 </p>
-                <p><a href="https://instagram.com" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></p>
+                <p><a href="https://instagram.com" target="_blank"><i class="fa fa-instagram"
+                            aria-hidden="true"></i></a></p>
                 <p><a href="https://facebook.com" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                 </p>
                 <p><a href="http://youtube.com" target="_blank"><i class="fa fa-youtube" aria-hidden="true"></i></a>
@@ -84,7 +121,8 @@
             </div>
             <div class="c c-3">
                 <div class="buton"><a href="./contacts.html">Контакты</a></div>
-                <p style="margin-top: 2%; margin-left: 30%;">Для консультаций и заказов обращайтесь любым удобным способом <br />Так же есть возможность заказать звонок.</p>
+                <p style="margin-top: 2%; margin-left: 30%;">Для консультаций и заказов обращайтесь любым удобным
+                    способом <br />Так же есть возможность заказать звонок.</p>
             </div>
 
         </div>

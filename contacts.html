@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Контакты</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./bootstrap.css">
     <link rel="stylesheet" href="./HeaderFooter.css">
     <link rel="shortcut icon" type="image/x-icon" href="./img/favicon.png">
     <script src="https://use.fontawesome.com/d2f0b40600.js"></script>
@@ -51,7 +52,7 @@
     <div class="section Nadpis">
         <h2>Контакты</h2>
     </div>
-    <div class="section">
+    <section class="section">
         <div class="Contacts-left">
             <div class="Conacts-rows">
                 <div class="Contacts-pic">
@@ -110,10 +111,38 @@
             <div class="Contacts-circles">
                 <div class="A">
                     <img src="./img/Big circle.png" alt="Big circle">
-                    <div class="B"><img src="./img/CallPic.png" alt="CallPic"></div>
+                    <div class="B"><a href="#popap"><img src="./img/CallPic.png" alt="CallPic"></a></div>
+                    <div class="B2"><a href="#popap"><img src="./img/CallPic2.png" alt="CallPic"></a></div>
                 </div>
             </div>
-            <div class="OrderBye"><a href="#"><button>Сделать заказ</button></a></div>
+            <div class="OrderBye"><a href="#popap"><button>Сделать заказ</button></a></div>
+        </div>
+    </section>
+
+    <!-- Попап -->
+
+    <div id="popap" class="popap">
+        <a href="#" class="popap-area"></a>
+        <div class="popap-body">
+            <div class="popap-content">
+                <a href="#" class="popap-close">X</a>
+                <form onsubmit="alert('Данные отправлены. В скором времени я с вами свяжусь.');return false">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Введите свой Email</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1"
+                        placeholder="name@example.com">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label"></label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="10" placeholder="Опишите, что нужно. Укажите дополнительные способы связи с вами..."></textarea>
+                </div>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" checked="checked" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1" >Нужна консультация</label>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Отправить</button>
+                </form>
+            </div>
         </div>
     </div>
 

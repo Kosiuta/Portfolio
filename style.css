@@ -32,8 +32,6 @@ html {
     align-items: center;
     flex-wrap: wrap;
     margin-bottom: 5vh;
-
-    border: 1px solid red;
 }
 
 .Nadpis {
@@ -121,6 +119,7 @@ html {
 .OrderBye {
     align-self: center;
     width: 85%;
+    
 }
 
 .OrderBye button {
@@ -220,7 +219,7 @@ html {
     margin-bottom: 16%;
 }
 
-.A img, .B img {
+.A img, .B img, .B2 img {
     width: 100%;
 }
 
@@ -228,13 +227,23 @@ html {
     position: relative;
 }
 
-.B {
+.B, .B2{
     width: 50%;
     position:absolute;
     bottom: 5%;
     left: 2%;
     cursor: pointer;
     border-radius:50%;
+    transition: all 0.2s;
+}
+.B2 {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.B:hover ~ .B2, .B2:hover {
+    opacity: 1;
+    visibility:visible;
 }
 
 .Contacts-right div.OrderBye {
@@ -428,7 +437,7 @@ html {
     --gray: #495A92;
 }
 
-.accordion__item {
+.accordion-item {
     --backgroundColor: #f7f7f7;
     display: flex;
     width: 100%;
@@ -437,11 +446,11 @@ html {
     flex-wrap: wrap;
 }
 
-.accordion__item:not(:last-child) {
+.accordion-item:not(:last-child) {
     margin-bottom: 3%;
 }
 
-.accordion__header {
+.accordion-header {
     width: 30%;
     height: 7vw;
     max-height: 120px;
@@ -463,12 +472,12 @@ html {
     font-weight: 800;
 }
 
-.accordion__header:hover {
+.accordion-header:hover {
     width: 34%;
     background: #FAB5D4;
 }
 
-.accordion__header__title {
+.accordion-header-title {
     width: 50%;
     padding-right: 10px;
     transition: color var(--time);
@@ -476,18 +485,18 @@ html {
     cursor: pointer;
 }
 
-.accordion__item.active .accordion__header__title {
+.accordion-item.active .accordion-header-title {
   color: var(--red)
 }
 
-.accordion__header__img {
+.accordion-header-img {
   border-right: 1px solid var(--gray);
   padding: 10px;
   cursor: pointer;
   
 }
 
-.accordion__header__img-circle {
+.accordion-header-img-circle {
   border: 1px solid #505050;
   padding: 10px;
   border-radius: 50%;
@@ -498,12 +507,12 @@ html {
   transition: border-color var(--time);
 }
 
-.accordion__item.active .accordion__header__img-circle {
+.accordion-item.active .accordion-header-img-circle {
   border-color: var(--red);
 }
 
-.accordion__header__img-circle::before,
-.accordion__header__img-circle::after {
+.accordion-header-img-circle::before,
+.accordion-header-img-circle::after {
   content: "";
   position: absolute;
   display: block;
@@ -513,20 +522,20 @@ html {
   transition: background-color var(--time), transform var(--time);
 }
 
-.accordion__item.active .accordion__header__img-circle::before,
-.accordion__item.active .accordion__header__img-circle::after {
+.accordion-item.active .accordion-header-img-circle::before,
+.accordion-item.active .accordion-header-img-circle::after {
   background-color: var(--red);
 }
 
-.accordion__item.active .accordion__header__img-circle::before {
+.accordion-item.active .accordion-header-img-circle::before {
   transform: rotate(0deg);
 }
 
-.accordion__header__img-circle::before {
+.accordion-header-img-circle::before {
   transform: rotate(90deg);
 }
 
-.accordion__text__wrapper {
+.accordion-text-wrapper {
     border-radius: 40px;
     width: 65%;
     overflow: hidden;
@@ -603,6 +612,7 @@ html {
 /* -----------
 Медиа
 -------------*/
+
 @media (max-width: 860px) {
     /* --Index-- */
     .right {
@@ -658,17 +668,17 @@ html {
     }
 
     /* -- Servises -- */
-    .accordion__header {
+    .accordion-header {
         width: 100%;
         height: 27vw;
     }
-    .accordion__text__wrapper {
+    .accordion-text-wrapper {
         width: 100%;
     }
-    .accordion__header:hover {
+    .accordion-header:hover {
         width: 100%;
     }
-    .accordion__header:hover ~ .accordion__text__wrapper {
+    .accordion-header:hover ~ .accordion-text-wrapper {
         width: 100%;
     }
     .topbutton {

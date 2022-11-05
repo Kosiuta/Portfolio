@@ -1,44 +1,50 @@
 // ------------  SERVICES ------------
 
-const accordion__items = [...document.querySelectorAll('.accordion__item')]; // Получаю элементы .accordion__item
+const accordion__items = [...document.querySelectorAll('.accordion-item')];
+accordion__items.forEach((item) => {
+  const btn = item.querySelector('.accordion-header-img');
+  const text = item.querySelector('.accordion-text-wrapper');
+  let height;
+  resize();
 
-accordion__items.forEach((item) => { // прохожусь по ним в цикле
-  const btn = item.querySelector('.accordion__header__img'); //Нахожу у элемента кружок, в котором будет плюс или минус
-  const text = item.querySelector('.accordion__text__wrapper'); // Нахожу обертку у элемента, которую буду уменьшать
-  let height; // Высота обертки элемента
-  resize(); // Вызываем просчёт высоты и задаём CSS стили для обёртки
-
-  if (!item.classList.contains('active')) { // если у текущего элемента аккордеона нету класс .active
-    text.style.height = '0px';  // задать обертке нулевую высоту
+  if (!item.classList.contains('active')) {
+    text.style.height = '0px';
   }
 
   function addOrRemoveHeight(height) {
-    if (item.classList.contains('active')) { // если у текущего элемента аккордеона есть класс .active
-      text.style.height = height + 'px'; // задать высоту, которую мы просчитали перед этим в переменной height
+    if (item.classList.contains('active')) {
+      text.style.height = height + 'px';
     } else {
-      text.style.height = '0px'; // Иначе задать нулевую высоту
+      text.style.height = '0px';
     }
   }
 
   function resize() {
-    text.style.height = 'auto'; // Задать элементу высоту auto, чтобы мы могли её посчитать, потому что мы её могли обнулить в CSS стилях
-    height = text.scrollHeight; // Запоминаем высоту элемента в переменную
-    addOrRemoveHeight(height); // Вызываем функцию, которая добавляет в CSS высоту элементу
+    text.style.height = 'auto';
+    height = text.scrollHeight;
+    addOrRemoveHeight(height);
   }
 
-  window.addEventListener('resize', resize); // ставим слушатель события resize на функцию resize
-// -----
-  const btn2 = item.querySelector('.accordion__header__title');
+  window.addEventListener('resize', resize);
+  const btn2 = item.querySelector('.accordion-header-title');
   btn2.addEventListener('click', () => {
-    item.classList.toggle('active'); // удаляем класс .active если он есть, иначе добавляем
+    item.classList.toggle('active');
     addOrRemoveHeight(height);
   })
-// -----
-  btn.addEventListener('click', () => { // при клике на кружок, выполнять анонимную функцию
-    item.classList.toggle('active'); // удаляем класс .active если он есть, иначе добавляем
-    addOrRemoveHeight(height); // Вызываем функцию, которая добавляет в CSS высоту элементу
+  btn.addEventListener('click', () => {
+    item.classList.toggle('active');
+    addOrRemoveHeight(height);
   });
 });
 
 // ------------- GALLARY ------------
 
+//TODO: эта реализация работает только при одинаковом к-стве картинок...
+function changeGal(folder) {
+  let content = document.querySelector(".carousel-inner").innerHTML;
+  if (folder == "Front-End") {
+    document.querySelector(".carousel-inner").innerHTML = content.replaceAll("Desing", folder);
+  } else {
+    document.querySelector(".carousel-inner").innerHTML = content.replaceAll("Front-End", folder);
+  }
+}
