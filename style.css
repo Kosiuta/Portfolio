@@ -109,6 +109,7 @@ html {
     color: #495A92;
     font-family: 'Kurale', serif;
     font-weight: 800;
+    overflow: hidden;
 }
 
 .menu button:hover {
@@ -270,6 +271,7 @@ html {
     border-radius: 25px;
     border: 1px solid #9DAFD3;
     margin-right: 2%;
+    overflow: hidden;
 }
 
 .About-left-mid {
@@ -410,7 +412,7 @@ html {
     filter: blur(20px);
 }
 .project-block:hover .project-content{
-    background: rgba(255, 224, 214, .2);
+    background: rgba(255, 224, 214, .4);
     opacity: 1;
 }
 
